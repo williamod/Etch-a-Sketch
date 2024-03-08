@@ -34,11 +34,11 @@ function fillRows (num) {
         for (let i = 0; i < num; i++) {
             let col = document.createElement('div');
             col.setAttribute('class', 'col');
-            col.setAttribute('id', `col${i}`) 
-            item.appendChild(col)
+            col.setAttribute('id', `col${i}`); 
+            col.onmouseover = () => col.setAttribute('style', 'background: black;');
+            item.appendChild(col);
         }
-    })
-    
+    })   
 }
 
 
@@ -50,6 +50,7 @@ const board = document.querySelector('.board')
 const reset = document.querySelector('#reset')
 let length;
 reset.onclick = () => {
+    board.innerHTML = '';
     length = getSize();
     console.log(length);
     makeRows(length);

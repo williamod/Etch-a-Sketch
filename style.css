@@ -1,5 +1,6 @@
 body {
     background-color: rgb(46, 45, 45);
+    
 }
 
 h1 {
@@ -17,21 +18,24 @@ button {
 .board {
     display: flex;
     flex-direction: column;
+    width: 960px;
+    height: 960px;
+    align-self: center;
 }
 
 .row {
     display: flex;
-    min-height: 24px;
+    
     background-color: white;
-    border: solid black;
+    border: solid black 1px;
     align-items: stretch;
     justify-content: space-evenly;
+    flex: 1;
+    
     
 }
 
 .col {
-    min-height: 24px;
-    min-width: 24px;
     background-color: rgb(194, 194, 194);
     flex-grow: 1;
 }
